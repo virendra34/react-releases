@@ -38,6 +38,38 @@ class Series extends Component{
                 "source":"NETFLIX",
                 "description":"Hosted by football superstars and brothers JJ, TJ and Derek Watt, ULTIMATE TAG is a high-octane physical competition show based on the classic playground game of chase.",
             },
+            {
+                "id":"blood-and-water-season-1",
+                "thumbnail":"https://cdn.releases.com/img/image/b4ea470c-d818-4bdd-b068-acbdbe7f03b9.jpg/200",
+                "title":"Blood & Water Season 1",
+                "category":"TV SERIES",
+                "source":"NETFLIX",
+                "description":"Blood & Water\" is a teen-led drama which follows a local teen uncovering her family's secret past and navigating the complicated world of a South African high schoo",
+            },
+            {
+                "id":"crucible",
+                "thumbnail":"https://cdn.releases.com/img/image/4a1a846f-a441-407a-af79-d6c7132af2f9.jpg/200",
+                "title":"Crucible",
+                "category":"GAME",
+                "source":"PC",
+                "description":"Crucible is a battle to the last survivor on a hostile, alien world. Players choose and customize heroes, making alliances and betraying allies on their path to victory. An additional player heightens the drama by triggering events, live-streaming the battles, and interacting with viewers.",
+            },
+            {
+                "id":"the-100-season-7",
+                "thumbnail":"https://cdn.releases.com/img/image/83adb92b-d166-4f76-a17e-54bb0778fb59.jpg/200",
+                "title":"The 100 Season 7",
+                "category":"TV SERIES",
+                "source":"LIFETIME",
+                "description":"Ninety-seven years ago, nuclear Armageddon decimated planet Earth, destroying civilization. The only survivors were the 400 inhabitants of 12 international space stations that were in orbit at the time. Three generations have been born in space, the survivors now number 4,000, and resources are running out on their dying \"Ark\" - the 12 stations now linked together and repurposed to keep the survivors alive. Draconian measures including capital punishment and population control are the order of the day, as the leaders of the Ark take ruthless steps to ensure their future, including secretly exiling a group of 100 juvenile prisoners to the Earth's surface to test whether it's",
+            },
+            {
+                "id":"cannibal-cuisine",
+                "thumbnail":"https://cdn.releases.com/img/image/cbadb9ed-dbd9-4607-a63e-6011141d7806.png/200",
+                "title":"Cannibal Cuisine",
+                "category":"GAME",
+                "source":"PC",
+                "description":"The god Hoochooboo is hungry… for you. But as all good cannibal cooks know, serving is better than being served. Chop up vegetables, fruits and tourists and serve your divine delicacies in arcade style with up to 4 chefs!",
+            },
         ]
     };
     componentDidMount(){
@@ -67,7 +99,7 @@ class Series extends Component{
         (
             <div className="Series">
                 <div className="center">
-                <img src={seriesById.thumbnail} alt={seriesById.id}/>
+                <img src={seriesById.thumbnail} alt={seriesById.id} height="282" width="200"/>
                 </div>
                 <h4 className="center">{seriesById.title}</h4>
                 <p>{seriesById.description}</p>

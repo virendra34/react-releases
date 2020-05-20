@@ -22,6 +22,13 @@ class Home extends Component{
                 "source":"LIFETIME",
             },
             {
+                "id":"ultimate-tag-season-1",
+                "thumbnail":"https://cdn.releases.com/img/image/0de4c58f-dcfb-4749-b33f-f114c09f1bf4.jpg/200",
+                "title":"Ultimate Tag Season 1",
+                "category":"TV SERIES",
+                "source":"NETFLIX",
+            },
+            {
                 "id":"at-home-with-amy-sedaris-season-3",
                 "thumbnail":"https://cdn.releases.com/img/image/61a426d1-07d8-40d6-8a91-74fa7d4e6dc4.jpg/200",
                 "title":"At home with Amy Sedaris Season 3",
@@ -29,11 +36,32 @@ class Home extends Component{
                 "source":"TRUETV",
             },
             {
-                "id":"ultimate-tag-season-1",
-                "thumbnail":"https://cdn.releases.com/img/image/0de4c58f-dcfb-4749-b33f-f114c09f1bf4.jpg/200",
-                "title":"Ultimate Tag Season 1",
+                "id":"blood-and-water-season-1",
+                "thumbnail":"https://cdn.releases.com/img/image/b4ea470c-d818-4bdd-b068-acbdbe7f03b9.jpg/200",
+                "title":"Blood & Water Season 1",
                 "category":"TV SERIES",
                 "source":"NETFLIX",
+            },
+            {
+                "id":"crucible",
+                "thumbnail":"https://cdn.releases.com/img/image/4a1a846f-a441-407a-af79-d6c7132af2f9.jpg/200",
+                "title":"Crucible",
+                "category":"GAME",
+                "source":"PC",
+            },
+            {
+                "id":"the-100-season-7",
+                "thumbnail":"https://cdn.releases.com/img/image/83adb92b-d166-4f76-a17e-54bb0778fb59.jpg/200",
+                "title":"The 100 Season 7",
+                "category":"TV SERIES",
+                "source":"LIFETIME",
+            },
+            {
+                "id":"cannibal-cuisine",
+                "thumbnail":"https://cdn.releases.com/img/image/cbadb9ed-dbd9-4607-a63e-6011141d7806.png/200",
+                "title":"Cannibal Cuisine",
+                "category":"GAME",
+                "source":"PC",
             },
         ]
     };
@@ -50,14 +78,12 @@ class Home extends Component{
         // console.log(this.props);
         const {series} = this.state;
         // console.log("SERIES",series);
-        const postList = series.length ? (
+        const seriesList = series.length ? (
             series.map((post, i) => {
                 return(
-                    // (console.log(i)),
-                    // ({i % 4 === 0})? (<div className="row">):('')
-                    <div className="col s3" key={post.id.length} style={{padding:"20px"}}>
+                    <div className="col s3" key={post.id.length} style={{padding:"10px"}}>
                         <Link to={'series/'+post.id}>
-                        <img src={post.thumbnail} alt={post.id}/>
+                        <img src={post.thumbnail} alt={post.id} height="282" width="200"/>
                         <div className="card-content">
                             <span className="card-title red-text">{post.title}</span>
                             <br/>
@@ -69,7 +95,6 @@ class Home extends Component{
                         </div>
                         </Link>
                     </div>
-                    // ({i % 4 === 0})? (</div>):('')
                 )
             })
         ) : (
@@ -79,7 +104,7 @@ class Home extends Component{
             <div className="container home">
                 <h4 className="center">Home</h4>
                 <div className="row">
-                    {postList}
+                    {seriesList}
                 </div>
             </div>
         );
