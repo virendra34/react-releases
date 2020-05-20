@@ -109,7 +109,7 @@ class Series extends Component{
         return(
             <div>
             <div className="container" style={{padding:"20px"}}>
-            <button className="btn red right" onClick={this.props.history.goBack}><b>X</b></button>
+            <button className="btn red right" title="Close" onClick={this.props.history.goBack}><b>X</b></button>
                 {Series}
             </div>
             </div>
