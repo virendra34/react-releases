@@ -85,7 +85,6 @@ class Series extends Component{
     }
     handleClick = () => {
         if(window.confirm("Really?")){
-            this.props.deleteSeries(this.props.Series.id);
             this.props.history.push('/');
         }
     }
@@ -103,16 +102,16 @@ class Series extends Component{
                 </div>
                 <h4 className="center">{seriesById.title}</h4>
                 <p>{seriesById.description}</p>
-                {/* <button className="btn grey" onClick={this.handleClick}>
-                    Delete Series
-                </button> */}
             </div>
         ) : (
             <div className="center">Loading Series...</div>
         );
         return(
+            <div>
             <div className="container" style={{padding:"20px"}}>
+            <button className="btn red right" onClick={this.props.history.goBack}><b>X</b></button>
                 {Series}
+            </div>
             </div>
         )
     }
